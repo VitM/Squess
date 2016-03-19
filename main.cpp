@@ -1,12 +1,17 @@
 #include <iostream>
 
+#include "GameManager/GameManager.h"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello, World!" << endl;
-    cout << "Press any key to continue." << endl;
 
+    GameManager SquessGameManager = {false};
+
+    SquessGameManager.StartGameLoop();
+
+    cout << "Press any key to continue." << endl;
     int x  = 0;
     cin >> x;
 
