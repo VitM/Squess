@@ -8,25 +8,29 @@
 #ifndef SQUESS_GAMEMANAGER_H
 #define SQUESS_GAMEMANAGER_H
 
+#include "../InputManager/InputManager.h"
+
 class GameManager
 {
-    public:
-        // Default constructor
-        GameManager(bool bShouldEndGame);
+public:
+    // Default constructor
+    GameManager();
 
-        // The game takes place fully within this loop
-        void StartGameLoop();
-    private:
-        // If there is any input from the player, we can parse it here
-        void GetInput();
+    // The game takes place fully within this loop
+    void StartGameLoop();
+private:
+    // If there is any input from the player, we can parse it here
+    void GetInput();
 
-        // The processing for 1 frame of the game will be done here
-        void ProcessGameFrame();
+    // The processing for 1 frame of the game will be done here
+    void ProcessGameFrame();
 
-        // The game will render a frame using this method
-        void RenderFrame();
+    // The game will render a frame using this method
+    void RenderFrame();
 
-        bool m_bShouldEndGame;
+    bool m_bShouldEndGame;
+
+    InputManager m_xInputManager;
 };
 
 #endif //SQUESS_GAMEMANAGER_H
