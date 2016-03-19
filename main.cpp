@@ -6,14 +6,9 @@ using namespace std;
 
 int main()
 {
-
-    GameManager SquessGameManager = {false};
+    GameManager SquessGameManager = {};
 
     SquessGameManager.StartGameLoop();
-
-    cout << "Press any key to continue." << endl;
-    int x  = 0;
-    cin >> x;
 
     return 0;
 }
